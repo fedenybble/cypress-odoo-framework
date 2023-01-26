@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run" : "cypress run"
+    "cypress:run": "cypress run"
   },
   "author": "Federico Padin",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.3.0"
+    "cypress": "^10.0.0"
   }
 }
