@@ -1,6 +1,6 @@
-import { loginModal } from "../pages/odoo-relumar/loginModal";
-import { mainPage } from "../pages/odoo-relumar/mainPage";
-import { navbar } from "../pages/odoo-relumar/navbar";
+import { loginModal } from "../../pages/odoo-relumar/loginModal";
+import { mainPage } from "../../pages/odoo-relumar/mainPage";
+import { navbar } from "../../pages/odoo-relumar/navbar";
 
 
 describe('Login Test', () => {
