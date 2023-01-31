@@ -16,6 +16,14 @@ class LoginModalTodoLy{
 
     }
 
+    loginWithouPassword(username){
+        this.loginModalElements.emailTextBox().type(username);
+        this.loginModalElements.loginModalBtn().click();
+
+    }
+
+
+
 }
 
 export const loginModalTodoLy = new LoginModalTodoLy();

@@ -2,8 +2,9 @@ class MainPageTodoLy{
 
     mainPageElements = {
 
-        loginModalBtn: () => cy.get('.HPHeaderLogin > a > img'),
-        loginErrorMsg: () => cy.get('.ui-state-error')
+        loginModalBtn : () => cy.get('.HPHeaderLogin > a > img'),
+        loginErrorMsg : () => cy.get('.ui-state-error'),
+        signUpModalBtn: () => cy.get('.HPHeaderSignup > a > img')
 
     }
 
@@ -11,9 +12,14 @@ class MainPageTodoLy{
         this.mainPageElements.loginModalBtn().click();
     }
 
-    nonRegisteredAccount(){
+    wrongLogin(){
         this.mainPageElements.loginErrorMsg().should("be.visible");
     }
+
+    clickSignUpModalBtn(){
+        this.mainPageElements.signUpModalBtn().click();
+    }
+
 
 }
 
