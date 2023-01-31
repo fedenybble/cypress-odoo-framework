@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  screenshotOnRunFailure:true,
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     charts: true,
