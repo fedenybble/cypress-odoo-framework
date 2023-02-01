@@ -14,8 +14,10 @@ describe("Project's Suite", {tags: "@ProjectsSuite"}, () => {
 
     it("Verify that the user can create a new project after being logged in", () => {
         let randomString = makeString(7);
+        projectModal.countProjects();
         projectModal.createNewProject(randomString);
         projectModal.verifyNewProjectCreatedOK(randomString);
+        projectModal.countProjects();
     });
 
 });

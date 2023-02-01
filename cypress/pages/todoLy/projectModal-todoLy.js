@@ -16,6 +16,14 @@ class ProjectModal{
         cy.xpath('//div[@id="ProjectListPlaceHolder"]//ul[@id="mainProjectList"]/li[last()]').should('contain.text', newProjectName);
     }
 
+    countProjects(){
+        cy.xpath('//*[@id="mainProjectList"]').find('li').its('length').
+        then((len) => {
+            cy.log("Numero de elementos "+len); //prints length
+        })
+    }
+
+
 }
 
 
