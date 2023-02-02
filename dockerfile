@@ -19,3 +19,6 @@ RUN npm install
 
 CMD [ "npm", "run", "cypress:run" ]
 
+
+
+
