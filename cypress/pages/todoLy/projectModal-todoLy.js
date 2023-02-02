@@ -13,23 +13,19 @@ class ProjectModal{
     }
 
     verifyNewProjectCreatedOK(newProjectName){
-        cy.xpath('//div[@id="ProjectListPlaceHolder"]//ul[@id="mainProjectList"]/li[last()]').should('contain.text', newProjectName);
+        cy.xpath('//ul[@id="mainProjectList"]/li[last()]//td[text()="'+newProjectName+'"]').should('have.text', newProjectName);
     }
+
 
     countProjects(){
         cy.xpath('//*[@id="mainProjectList"]').find('li').its('length').
         then((len) => {
-            cy.log("Numero de elementos "+len); //prints length
+            //cy.log("Numero de elementos "+len); 
+            cy.xpath('//*[@id="mainProjectList"]').find('li').should("have.length", len);
         })
+         
     }
 
-
 }
-
-
-
-
-
-
 
 export const projectModal = new ProjectModal();

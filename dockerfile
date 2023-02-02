@@ -10,10 +10,12 @@ WORKDIR /cypress-odoo-framework
 #Copiamos los archivos esenciales que necesita Cypress para correr.
 COPY ./package.json .
 COPY ./cypress.config.js .  
-COPY ./cypress ./cypress
+COPY ./cypress ./cypress   
+
+VOLUME [ "./cypress-odoo-framework/cypress/reports" ]
 
 #Se instalan las dependencias de node
 RUN npm install
 
-CMD npm run cypress:run
+CMD [ "npm", "run", "cypress:run" ]
 
